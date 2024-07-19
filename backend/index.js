@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 3000 ;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', `${process.env.PORT}`], // Replace with your client URL
+  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+}));
 
 if (1 === 1) {
     app.use(express.static('../frontend/dist'));
