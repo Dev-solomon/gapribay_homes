@@ -1,0 +1,37 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url = "mongodb+srv://ntiasolomon7:solomon@cluster0.u19sy66.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+}
+
+model User {
+    id               String      @id @default(auto()) @map("_id") @db.ObjectId
+    name             String?
+    email            String      @unique
+    image            String?
+    isAdmin          Boolean     @default(false)
+    bookedVisits     Json[]
+    favResidenciesID String[]    @db.ObjectId
+    ownedResidencies Residency[] @relation("Owner")
+}
+
+model Residency {
+    id          String   @id @default(auto()) @map("_id") @db.ObjectId
+    title       String
+    description String
+    price       Int
+    address     String
+    city        String
+    country     String
+    image       String
+    facilities  Json
+    userEmail   String
+    owner       User     @relation("Owner", fields: [userEmail], references: [email])
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    @@unique(fields: [address, userEmail])
+}
