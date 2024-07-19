@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://www.gapribay.com/api",
 });
 
 export const getAllProperties = async () => {
