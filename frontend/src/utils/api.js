@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-  baseURL: "https://gapribay.com/api",
+  baseURL: "https://www.gapribay.com/api",
   withCredentials: true,
 });
 
