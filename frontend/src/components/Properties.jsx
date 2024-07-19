@@ -71,7 +71,7 @@ const Properties = () => {
           modules={[Autoplay]}
           className='h-[488px] md:h-[533px] xl:h-[422px] mt-5'
         >
-          {data.map((property) => (
+          {data.slice(0,6).forEach((property) => (
               <SwiperSlide key={property.title}>
                 <Item property={property} listing={false} />
               </SwiperSlide>

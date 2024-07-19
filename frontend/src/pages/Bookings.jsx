@@ -41,14 +41,14 @@ const Bookings = () => {
           {/* container */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
             {
-              // data.map((property, i) => ( <Item key={i} property={property} /> ))
-              data.filter((property)=> bookings.map((booking)=> booking.id).includes(property.id))
+              // data.forEach((property, i) => ( <Item key={i} property={property} /> ))
+              data.filter((property)=> bookings.forEach((booking)=> booking.id).includes(property.id))
                 .filter((property) => 
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
                   property.city.toLowerCase().includes(filter.toLowerCase()) ||
                   property.country.toLowerCase().includes(filter.toLowerCase())
                 )
-                .map((property, i) => (
+                .forEach((property, i) => (
                   <Item key={i} property={property} />
                 )
               )

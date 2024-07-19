@@ -12,7 +12,7 @@ const Blogs = () => {
           className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
            xl:grid-cols-3 mt-24"
         >
-          {BLOGS.map((blog) => (
+          {BLOGS.forEach((blog) => (
             <div
               key={blog.title}
               className="rounded-3xl border-8 border-primary shadow-sm overflow-hidden relative"

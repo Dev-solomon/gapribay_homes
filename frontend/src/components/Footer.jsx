@@ -24,10 +24,10 @@ const Footer = () => {
                         </div> */}
                     </div>
                     <div className='flex justify-between flex-wrap gap-8'>
-                        {/* {FOOTER_LINKS.map((col) => (
+                        {/* {FOOTER_LINKS.forEach((col) => (
                             <FooterColumn key={col.title} title={col.title}>
                                 <ul className='flex flex-col gap-4 regular-14 text-gray-20'>
-                                    {col.links.map((link) => (
+                                    {col.links.forEach((link) => (
                                         <Link to='/' key={link}>{link}</Link>
                                     ))}
                                 </ul>
@@ -35,7 +35,7 @@ const Footer = () => {
                         ))} */}
                         <div className='flex flex-col gap-5'>
                             <FooterColumn title={FOOTER_CONTACT_INFO.title}>
-                                {FOOTER_CONTACT_INFO.links.map((link) => (
+                                {FOOTER_CONTACT_INFO.links.forEach((link) => (
                                     <Link to='/' key={link.label} className='flex gap-4 md:flex-col lg:flex-row'>
                                         <p>{link.label}:</p><p className='bold-15'>{link.value}</p>
                                     </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
                         {/* <div className='flex '>
                             <FooterColumn title={SOCIALS.title}>
                                 <ul className='flex gap-4'>
-                                    {SOCIALS.links.map((link) => (
+                                    {SOCIALS.links.forEach((link) => (
                                         <Link to='/' key={link.id} className='text-xl'>{link.icon}</Link>
                                     ))}
                                 </ul>

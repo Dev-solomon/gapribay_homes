@@ -116,7 +116,7 @@ const Property = () => {
             </div>
           </div>
           <div>
-            {bookings?.map((booking) => booking.id).includes(id) ? (
+            {bookings?.forEach((booking) => booking.id).includes(id) ? (
               <>
                 <Button
                   onClick={() => cancelBooking()}
