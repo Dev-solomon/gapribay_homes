@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 
 export const api = axios.create({
   baseURL: "https://gapribay.com/api",
+  withCredentials: true,
 });
 
 export const getAllProperties = async () => {
