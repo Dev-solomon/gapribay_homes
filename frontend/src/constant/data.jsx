@@ -132,19 +132,19 @@ export const PROPERTIES = [
     }
   },
   {
-    title: "Lakefront Lodge Haven Haven",
-    image: img5,
-    category: "Apartment",
-    address: "Long Street 123",
-    country: "South Africa",
-    city: "Cape Town",
-    area: 430,
-    price: 500,
-    description: "A cozy lakefront apartment with scenic views and modern amenities.",
-    facilities: {
-      bedrooms: 2,
-      bathrooms: 2,
-      parkings: 1
+    "title": "Lakefront Lodge Haven Haven",
+    "image": img5,
+    "category": "Apartment",
+    "address": "Long Street 123",
+    "country": "South Africa",
+    "city": "Cape Town",
+    "area": 430,
+    "price": 500,
+    "description": "A cozy lakefront apartment with scenic views and modern amenities.",
+    "facilities": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parkings": 1
     }
   },
   {
