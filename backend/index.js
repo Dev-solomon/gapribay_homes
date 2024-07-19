@@ -12,10 +12,6 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-app.use(cors({
-  origin: ['https://www.gapribay.com', `${process.env.PORT}`], // Replace with your client URL
-  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
-}));
 
 if (1 === 1) {
     app.use(express.static('../frontend/dist'));
