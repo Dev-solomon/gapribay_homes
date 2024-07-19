@@ -7,7 +7,7 @@ import { residencyRoute } from './routes/residencyRoute.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000 ;
+
 
 app.use(express.json());
 app.use(cookieParser());
@@ -23,7 +23,7 @@ if (1 === 1) {
       res.sendFile(path.resolve('../frontend', 'dist', 'index.html'));
     });
   }
-
+  const PORT = process.env.PORT || 3000 ;
 app.listen(PORT, ()=> {
     console.log(`Server is running on port ${PORT}`)
 })
