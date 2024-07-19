@@ -1,6 +1,7 @@
 import cookieParser from 'cookie-parser';
 import cors from 'cors'
 import dotenv from 'dotenv';
+import path from 'path';
 import express from 'express';
 import { userRoute } from './routes/userRoute.js';
 import { residencyRoute } from './routes/residencyRoute.js';
