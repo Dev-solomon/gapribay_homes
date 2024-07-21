@@ -35,6 +35,7 @@ const About = () => {
     const formatNumberWithCommas = (number) => {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
+    
 
     return (
         <section id='about' className='max-padd-container py-16 xl:py-28'>
@@ -59,7 +60,8 @@ const About = () => {
                     </p>
                     {/* Statistics Container */}
                     <div className="flex flex-wrap gap-4">
-                        {statistics.forEach((statistic, index) => (
+                        { 
+                            statistics.map((statistic, index) => (
                             <div key={index} className="bg-primary p-4 rounded-lg">
                                 <div className='flex items-center gap-1'>
                                     <CountUp start={isVisible ? 0 : null} end={statistic.value} duration={10} delay={3}>

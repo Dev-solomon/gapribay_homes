@@ -39,14 +39,14 @@ const Listing = () => {
           {/* container */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
             {
-              // data.forEach((property, i) => ( <Item key={i} property={property} /> ))
+              // data.map((property, i) => ( <Item key={i} property={property} /> ))
               data
                 .filter((property) => 
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
                   property.city.toLowerCase().includes(filter.toLowerCase()) ||
                   property.country.toLowerCase().includes(filter.toLowerCase())
                 )
-                .forEach((property, i) => (
+                .map((property, i) => (
                   <Item key={i} property={property} />
                 )
               )
