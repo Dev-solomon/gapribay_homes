@@ -8,11 +8,19 @@ import { residencyRoute } from './routes/residencyRoute.js';
 dotenv.config();
 
 const app = express();
-
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://www.gapribay.com'],
+  credentials: true  // Allow cookies and HTTP authentication to be included
+};
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOptions));
+const PORT = process.env.PORT || 3000 ;
+
+
+app.use('/api/user', userRoute)
+app.use('/api/residency', residencyRoute)
 
 if (1 === 1) {
     app.use(express.static('../frontend/dist'));
@@ -20,10 +28,8 @@ if (1 === 1) {
       res.sendFile(path.resolve('../frontend', 'dist', 'index.html'));
     });
   }
-  const PORT = process.env.PORT || 3000 ;
-app.listen(PORT, ()=> {
+  app.listen(PORT, ()=> {
     console.log(`Server is running on port ${PORT}`)
 })
 
-app.use('/api/user', userRoute)
-app.use('/api/residency', residencyRoute)
+

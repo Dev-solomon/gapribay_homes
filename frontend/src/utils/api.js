@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 export const api = axios.create({
   baseURL: "https://www.gapribay.com/api",
-  withCredentials: true,
 });
 
 export const getAllProperties = async () => {
@@ -16,6 +15,7 @@ export const getAllProperties = async () => {
     if (response.status === 400 || response.status === 500) {
       throw response.data;
     }
+    console.log(response.data)
     return response.data;
   } catch (error) {
     toast.error("Something's not right");
