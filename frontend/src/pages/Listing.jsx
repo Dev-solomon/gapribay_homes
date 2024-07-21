@@ -6,6 +6,7 @@ import Item from "../components/Item";
 
 const Listing = () => {
   const { data, isError, isLoading } = useProperties();
+  let arrayLike = Array.from(data);
   const [filter, setFilter] = useState("");
 
   if (isError) {
@@ -40,8 +41,7 @@ const Listing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
             {
               // data.map((property, i) => ( <Item key={i} property={property} /> ))
-              data
-                .filter((property) => 
+              arrayLike.filter((property) => 
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
                   property.city.toLowerCase().includes(filter.toLowerCase()) ||
                   property.country.toLowerCase().includes(filter.toLowerCase())

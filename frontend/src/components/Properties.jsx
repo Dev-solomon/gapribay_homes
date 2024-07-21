@@ -16,7 +16,8 @@ const Properties = () => {
 
   const { data, isError, isLoading } = useProperties();
   console.log(data)
-  // const slicedArray = Array.isArray(data) ? data.slice(0, 6) : [];
+  let slicedArray = Array.isArray(data) ? data.slice(0, 6) : [];
+  console.log("sliced" + slicedArray)
   if (isError) {
     return (
       <div>
@@ -73,7 +74,7 @@ const Properties = () => {
           modules={[Autoplay]}
           className='h-[488px] md:h-[533px] xl:h-[422px] mt-5'
         >
-          {data.slice(0,6).forEach((property) => (
+          {slicedArray.slice(0,6).map((property) => (
               <SwiperSlide key={property.title}>
                 <Item property={property} listing={false} />
               </SwiperSlide>
