@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://www.gapribay.com'],
+  origin: ['https://www.gapribay.com', 'https://www.gapribay.com'],
   credentials: true  // Allow cookies and HTTP authentication to be included
 };
 
