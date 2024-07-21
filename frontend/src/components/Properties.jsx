@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 const Properties = () => {
 
   const { data, isError, isLoading } = useProperties();
-  const slicedArray = Array.isArray(data) ? data.slice(0, 6) : [];
+  // const slicedArray = Array.isArray(data) ? data.slice(0, 6) : [];
   if (isError) {
     return (
       <div>
@@ -72,7 +72,7 @@ const Properties = () => {
           modules={[Autoplay]}
           className='h-[488px] md:h-[533px] xl:h-[422px] mt-5'
         >
-          {slicedArray.slice(0,6).forEach((property) => (
+          {data.slice(0,6).forEach((property) => (
               <SwiperSlide key={property.title}>
                 <Item property={property} listing={false} />
               </SwiperSlide>

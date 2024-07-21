@@ -29,7 +29,7 @@ const Layout = () => {
 
             const res = await getAccessTokenWithPopup({
                 authorizationParams: {
-                    audience: "https://www.gapribay.com",
+                    audience: "https://gapribay.com",
                     scope: "openid profile email"
                 },
             });
