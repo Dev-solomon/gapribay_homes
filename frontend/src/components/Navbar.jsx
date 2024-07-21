@@ -51,7 +51,7 @@ const Navbar = ({ containerStyles }) => {
         <div>contact</div>
       </NavLink>
       {
-        isAuthenticated && user.email === 'ntiasolomon7@gmail.com'
+        isAuthenticated && user.email === 'gapribay@gmail.com'
         ?
         (<div
         onClick={handleAddPropertyClick}
