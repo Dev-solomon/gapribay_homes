@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       domain="dev-j5niy8d6l7n0dwm3.us.auth0.com"
       clientId="2SnyNEoZw3aVsyzcp2mccWZIzyvMBuj2"
       authorizationParams={{
-        redirect_uri: ""
+        redirect_uri: "https://www.gapribay.com"
       }}
       audience=" https://www.gapribay.com"
       scope="openid profile email"
