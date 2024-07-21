@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 const Properties = () => {
 
   const { data, isError, isLoading } = useProperties();
+  console.log(data)
   // const slicedArray = Array.isArray(data) ? data.slice(0, 6) : [];
   if (isError) {
     return (
