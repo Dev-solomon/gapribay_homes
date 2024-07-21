@@ -7,6 +7,7 @@ import Item from "../components/Item";
 const Listing = () => {
   const { data, isError, isLoading } = useProperties();
   let arrayLike = Array.from(data);
+  console.log("array"+ arrayLike)
   const [filter, setFilter] = useState("");
 
   if (isError) {
