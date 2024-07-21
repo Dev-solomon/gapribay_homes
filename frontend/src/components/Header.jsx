@@ -41,7 +41,7 @@ const Header = () => {
                     <Link to={'/'} className='flex items-center gap-x-2' >
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
                         <span className='font-[900] text-[24px]'><img src={logoIcon} alt="" height={50} width={50} /></span>
-                        <span className='font-[600] medium-20 ml-2'>Gapribay</span>
+                        <span className='font-[600] medium-20 ml-2'></span>
                     </div>
 
                         </Link>

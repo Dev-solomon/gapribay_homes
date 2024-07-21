@@ -217,8 +217,8 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
-    { label: "Contact Number", value: "+2348033558636" },
-    { label: "Email Address", value: "info@casacentral.com" },
+    { label: "Contact Number", value: "+234 803 355 8636" },
+    { label: "Email Address", value: "gapribay@gmail.com" },
   ],
 };
 
