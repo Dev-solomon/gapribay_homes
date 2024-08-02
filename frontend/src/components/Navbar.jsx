@@ -44,7 +44,7 @@ const Navbar = ({ containerStyles }) => {
         <div>listing</div>
       </NavLink>
       <NavLink
-        to={"mailto:inquiries.codeatusman@gmail.com"}
+        to={"mailto:gapribay@gmail.com"}
         className="flexCenter gap-x-1 rounded-full px-2 py-1"
       >
         <MdPermContactCalendar />
